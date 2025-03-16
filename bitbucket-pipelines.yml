@@ -1,0 +1,16 @@
+image: python:3.9
+
+pipelines:
+  default:
+    - step:
+        name: Install Dependencies
+        caches:
+          - pip
+        script:
+          - pip install -r requirements.txt
+          - sudo apt update && sudo apt install -y megatools aria2 ffmpeg
+    - step:
+        name: Deploy Bot
+        script:
+          - nohup python3 bot.py &
+          

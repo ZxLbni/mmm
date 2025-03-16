@@ -1,0 +1,8 @@
+pyrogram
+tgcrypto
+mega.py
+tqdm
+google-auth
+google-auth-oauthlib
+google-auth-httplib2
+googleapiclient
